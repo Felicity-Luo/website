@@ -1,0 +1,134 @@
+/* styles.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* styles.css */
+#box {
+    position: absolute; /* 使背景充满整个页面 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* 使背景在内容后面 */
+    background: linear-gradient(to bottom, #f9dfcd, #EBFAFF, #fcffd6, #BEE1FA); /* 设置渐变背景 */
+    background-attachment: fixed; /* 确保背景固定，不随页面滚动 */
+    background-size: cover; /* 背景图像覆盖整个容器 */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #FBF8EF; /* 如果需要，你也可以保留此背景 */
+    color: #333;
+    line-height: 1.6;
+    padding: 0 20px;
+    margin: 0; /* 移除默认的body外边距 */
+}
+
+
+header {
+    padding: 30px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+#category-buttons {
+    margin-top: 20px;
+}
+
+.category-btn {
+    padding: 12px 24px;
+    font-size: 1em;
+    background-color: #2A629A; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.category-btn:hover {
+    background-color: #24609b; /* 橙色加深 */
+    transform: scale(1.05);
+}
+
+#website-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* 自适应列数 */
+    gap: 20px;
+    margin-top: 20px;
+    justify-items: center; /* 内容居中 */
+}
+
+.website-item {
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 垂直居中 */
+    align-items: center; /* 水平居中 */
+    height: 100px; /* 控制每个卡片的高度 */
+    width: 90%; /* 控制宽度 */
+}
+
+.website-item h4 {
+    margin-bottom: 5px; /* 减少间距，让标题和描述更紧密 */
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #333;
+    text-align: center; /* 让标题水平居中 */
+}
+
+.website-item p {
+    font-size: 1em;
+    margin-bottom: 10px; /* 与标题保持紧密 */
+    color: #666;
+    
+}
+
+.website-item a {
+    color: #78B3CE; /* 淡蓝色 */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.website-item a:hover {
+    color: #F96E2A; /* 橙色 */
+}
+
+.website-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* 增加响应式设计 */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+    .website-item {
+        height: 230px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+    .website-item {
+        height: 200px;
+    }
+}
