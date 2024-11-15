@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="styles.css">
     <script src="BlurGradientBg.min.js"></script>
 </head>
+
 <body>
     <!-- 为背景渐变添加ID -->
     <div id="box"></div>
@@ -14,7 +16,7 @@
     <header>
         <h1>网站推荐平台</h1>
         <div id="category-buttons">
-            <button class="category-btn" data-category="all">所有网站</button>
+            <button class="category-btn" data-category="all">所有</button>
             <button class="category-btn" data-category="technology">技术</button>
             <button class="category-btn" data-category="entertainment">娱乐</button>
             <button class="category-btn" data-category="education">教育</button>
@@ -32,10 +34,11 @@
     <script>
         // 确保加载 Color4Bg 库后
         let colorbg = new Color4Bg.BlurGradientBg({
-            dom: "box", // 背景将应用到id为"box"的元素
-            colors: ["#f9dfcd", "#EBFAFF", "#fcffd6", "#BEE1FA"], // 你的渐变颜色
+            dom: "box",
+            colors: ["#f9dfcd", "#EBFAFF", "#fcffd6", "#BEE1FA"],
             loop: true
-        });
+        })
     </script>
 </body>
+
 </html>
