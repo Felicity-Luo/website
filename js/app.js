@@ -57,4 +57,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 初始加载所有网站
     loadWebsites();
+
+    // 确保加载 Color4Bg 库后
+    let colorbg = new Color4Bg.BlurGradientBg({
+        dom: "box",
+        colors: ["#f9dfcd", "#EBFAFF", "#fcffd6", "#BEE1FA"],
+        loop: true
+    });
+
+    // 检查 localStorage 中是否有访问次数记录
+    if (localStorage.getItem('visitCount')) {
+        // 如果有，增加访问次数
+        let visitCount = parseInt(localStorage.getItem('visitCount'));
+        visitCount += 1;
+        localStorage.setItem('visitCount', visitCount);
+    } else {
+        // 如果没有，初始化访问次数为 1
+        localStorage.setItem('visitCount', 1);
+    }
+
+    // 显示访问次数
+    const visitCount = localStorage.getItem('visitCount');
+    console.log(`您已访问此网站 ${visitCount} 次`);
+
+    // 更新页面上的访问次数显示
+    document.getElementById('visit-count-display').innerText = `您是今天的第 ${visitCount} 位访问者`;
 });
