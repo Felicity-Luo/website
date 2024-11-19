@@ -10,6 +10,6 @@
 </ul>
 
 <h3>工作流</h3>
-<p>我们的工作流是：<strong>收集网站</strong> -> <strong>制作视频</strong> -> <strong>抖音发布</strong> -> <strong>网站记录</strong>。</p>
+<p>我们的工作流是：<strong>收集网站</strong> -> <strong>制作视频</strong> -> <strong>抖音发布</strong> -> <strong>同步网站</strong>。</p>
 
 <p>不再被信息轰炸，跟着糯米，每天一“站”，让浏览器重新成为你发现新世界的入口。</p>
