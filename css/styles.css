@@ -70,7 +70,7 @@ header h1 {
     gap: 20px; /* 调整卡片之间的间距 */
     margin-top: 20px;
     justify-items: center;
-    padding: 0 50px; /* 增加整个列表的左右留白 */
+    padding: 0 10px; /* 增加整个列表的左右留白 */
 }
 
 /* 卡片样式，调整卡片大小 */
@@ -122,47 +122,41 @@ header h1 {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* 移动端配 */
+/* 移动端样式配置 */
+/* 针对最大宽度为768px的设备进行样式调整 */
 @media (max-width: 768px) {
     header h1 {
-        font-size: 2em;
+        font-size: 2em; /* 调整标题字体大小为2em */
     }
     .category-btn {
-        font-size: 0.9em;
-        padding: 8px 16px;
+        font-size: 0.5em; /* 调整按钮字体大小为0.5em */
+        padding: 6px 12px; /* 调整按钮的内边距 */
     }
 
     #category-buttons {
-        justify-content: center; /* 按钮居中 */
-        gap: 5px;
+        justify-content: center; /* 将按钮居中对齐 */
+        gap: 5px; /* 调整按钮之间的间距 */
     }
 
     .website-item {
-        height: 150px; /* 更小的卡片高度 */
+        height: 120px; /* 调整卡片高度为120px */
+        margin: 0; /* 移除卡片的左右留白 */
     }
 
-    /* 移动端每行显示三个卡片 */
+    /* 调整网站列表的布局，每行显示的卡片数量根据屏幕大小自动适应 */
     #website-list {
-        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); /* 让每个卡片宽度最小为130px，根据屏幕大小调整每行数量 */
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); /* 每个卡片的最小宽度为130px */
     }
 }
 
+/* 针对最大宽度为480px的设备进行样式调整 */
 @media (max-width: 480px) {
     header h1 {
-        font-size: 1.5em;
+        font-size: 1.5em; /* 调整标题字体大小为1.5em */
     }
     .category-btn {
-        font-size: 0.8em;
-        padding: 6px 12px;
-    }
-
-    .website-item {
-        height: 130px; /* 更小的卡片高度 */
-    }
-
-    /* 移动端小屏时，每行依然显示三个卡片 */
-    #website-list {
-        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* 调整卡片的最小宽度 */
+        font-size: 0.8em; /* 调整按钮字体大小为0.8em */
+        padding: 6px 12px; /* 调整按钮的内边距 */
     }
 }
 
@@ -216,14 +210,4 @@ header h1 {
 .github-link:hover svg {
     fill: #000; /* 悬停时改变图标颜色 */
     transform: scale(1.1);
-}
-
-#visit-count-display {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    padding: 10px 0;
-    font-size: 10px; /* 调整字体大小 */
-    color: #333; /* 确保文字颜色可见 */
 }
