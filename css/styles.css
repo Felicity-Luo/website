@@ -1,0 +1,219 @@
+/* styles.css */
+
+/* 基本样式设置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#box {
+    position: fixed;  /* 使用固定定位，使背景不随页面滚动 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;  /* 高度为视口的高度，确保背景占满整个屏幕 */
+    z-index: -1;    /* 确保背景在所有内容下面 */
+    background-attachment: fixed;  /* 固定背景效果 */
+    background-size: cover; /* 背景自动适应容器大小 */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #FBF8EF; /* 浅米色背景 */
+    color: #333;
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    padding: 30px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+#category-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;  /* 居中对齐 */
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.category-btn {
+    padding: 12px 20px;
+    font-size: 1em;
+    background-color: #78B3CE; /* 淡蓝色 */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    white-space: nowrap;
+}
+
+.category-btn:hover {
+    background-color: #61A0C1; /* 淡蓝色加深 */
+    transform: scale(1.05);
+}
+
+/* 网站列表 - 调整为三列 */
+#website-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* 每行显示的卡片数量自动适应 */
+    gap: 20px; /* 调整卡片之间的间距 */
+    margin-top: 20px;
+    justify-items: center;
+    padding: 0 50px; /* 增加整个列表的左右留白 */
+}
+
+/* 卡片样式，调整卡片大小 */
+.website-item {
+    background-color: transparent;
+    padding: 12px;  /* 减少内部间距 */
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 120px; /* 调整卡片高度 */
+    width: 100%; /* 使卡片宽度适应父容器 */
+}
+
+.website-item h4 {
+    margin-bottom: 5px;
+    font-size: 1.1em;  /* 更小的标题字体大小 */
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+}
+
+.website-item p {
+    font-size: 0.85em;  /* 更小的描述文字字体大小 */
+    margin-bottom: 10px;
+    color: #666;
+    text-align: left; /* 向左对齐 */
+    padding-left: 1em; /* 使用 padding-left 代替 text-indent */
+    margin-left: -1em; /* 调整 margin-left 以抵消 padding-left 的影响 */
+}
+
+.website-item a {
+    color: #78B3CE; /* 淡蓝色 */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.website-item a:hover {
+    color: #F96E2A; /* 橙色 */
+}
+
+.website-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* 移动端配 */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+    .category-btn {
+        font-size: 0.9em;
+        padding: 8px 16px;
+    }
+
+    #category-buttons {
+        justify-content: center; /* 按钮居中 */
+        gap: 5px;
+    }
+
+    .website-item {
+        height: 150px; /* 更小的卡片高度 */
+    }
+
+    /* 移动端每行显示三个卡片 */
+    #website-list {
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); /* 让每个卡片宽度最小为130px，根据屏幕大小调整每行数量 */
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+    .category-btn {
+        font-size: 0.8em;
+        padding: 6px 12px;
+    }
+
+    .website-item {
+        height: 130px; /* 更小的卡片高度 */
+    }
+
+    /* 移动端小屏时，每行依然显示三个卡片 */
+    #website-list {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* 调整卡片的最小宽度 */
+    }
+}
+
+.website-card {
+    position: relative;
+    background-color: transparent;
+    padding: 12px;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    width: 100%;
+    margin: 0 10px; /* 为每个卡片添加左右留白 */
+}
+
+.card-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: black; /* 确保文字颜色可见 */
+    padding: 5px;
+    font-size: 12px;
+    border-radius: 0 0 5px 0;
+}
+
+/* 添加鼠标悬停动画效果 */
+.website-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* 增加阴影效果 */
+}
+
+.github-link {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 5px;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+.github-link svg {
+    width: 24px; /* 缩小图标的宽度 */
+    height: 24px; /* 缩小图标的高度 */
+}
+
+.github-link:hover svg {
+    fill: #000; /* 悬停时改变图标颜色 */
+    transform: scale(1.1);
+}
