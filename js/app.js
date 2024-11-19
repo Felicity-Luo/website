@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const websites = [
         { name: 'Daydoku', url: 'https://www.daydoku.com/', description: '赛博Puzzle网站', category: 'entertainment', label: 'vol.01' },
         { name: 'Window-Swap', url: 'https://www.window-swap.com/', description: '在世界的某个地方打开一扇窗', category: 'entertainment', label: 'vol.02' },
+        { name: 'Hotkey Cheatsheet', url: 'https://hotkeycheatsheet.com/', description: '快捷键备忘录', category: 'tool', label: 'vol.03' },
     ];
 
     // 获取网站列表的DOM元素
