@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: 'Window-Swap', url: 'https://www.window-swap.com/', description: '在世界的某个地方打开一扇窗', category: 'entertainment', label: 'vol.02' },
         { name: 'Hotkey Cheatsheet', url: 'https://hotkeycheatsheet.com/', description: '快捷键备忘录', category: 'tool', label: 'vol.03' },
         { name: 'Human Benchmark', url: 'https://humanbenchmark.com/', description: '人类基准测试', category: 'tool', label: 'vol.04' },
-        { name: '文字密室逃脱', url: 'https://nodes-escape.hzfe.org/', description: '', category: 'entertainment', label: 'vol.05' },
+        { name: '文字密室逃脱', url: 'https://nodes-escape.hzfe.org/', description: '独具一格的解密类游戏', category: 'entertainment', label: 'vol.05' },
     ];
 
     // 获取网站列表的DOM元素
